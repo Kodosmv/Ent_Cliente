@@ -1,0 +1,4 @@
+let letdras = []
+letdras.unshift('A', 'B' , 'C');
+
+letdras.push('D', 'e');

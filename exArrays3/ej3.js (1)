@@ -1,0 +1,6 @@
+let numeros =["rojo", "verde","azul","amarillo","naranja", "violeta"]
+numeros.push()
+let num2 = numeros.slice(1,5);
+console.log(num2);
+numeros.splice(3,2,'negro', 'blanco');
+console.log(numeros);

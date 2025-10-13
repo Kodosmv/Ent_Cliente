@@ -1,0 +1,58 @@
+/*
+//ej1
+const colores = ['rojo', 'verde', 'azul'];
+console.log(colores);
+colores[1] = 'amarillo';
+console.log(colores);
+
+//ej 2
+const paises = ['españa', 'francia', 'Alemania', 'italia'];
+for (const i in paises) {
+  console.log(paises[i]);
+}
+delete paises[0];
+console.log(' ');
+for (const i in paises) {
+  console.log(paises[i]);
+}
+
+// ej3
+const nombres = ['Lucia', 'Viki', 'Diego', 'Neus', 'Aitana'];
+const edades = [18, 25, 23, 5, 22];
+const mayoresDeEdad = [];
+for (const i in nombres) {
+  if (edades[i] >= 18) {
+    mayoresDeEdad[i] = nombres[i];
+  }
+
+  console.log(mayoresDeEdad);
+}
+console.log(' ');
+for (const j in mayoresDeEdad) {
+  console.log(mayoresDeEdad[j]);
+}*/
+// ej4
+const palabras = [
+  'ana',
+  'radar',
+  'javascript',
+  'reconocer',
+  'oro',
+  'palindromo',
+  'salas',
+];
+let palindromo = [];
+for (let palabra of palabras) {
+  let isPalin = true;
+
+  for (const i in palabra) {
+    if (palabras[i] !== palabras[palabra.length - 1 - i]) {
+      isPalin = false;
+      break;
+    }
+  }
+  if (isPalin) {
+    palindromo[palindromos.length] = palabra;
+    console.log(palindromo);
+  }
+}

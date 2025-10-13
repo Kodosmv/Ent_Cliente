@@ -1,0 +1,2 @@
+let nombres= ["ana", 'juan'];
+nombres.sort
