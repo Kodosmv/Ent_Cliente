@@ -5,7 +5,7 @@ const personas = [
   { nombre: 'Laura', edad: 16 },
 ];
 
-let filPer = personas.filter((personas) => personas.edad > 18);
+let filPer = personas.filter((persona) => persona.edad > 18);
 console.log(filPer);
 
 let multPer = filPer.map((filPer) => filPer.edad * 2);
