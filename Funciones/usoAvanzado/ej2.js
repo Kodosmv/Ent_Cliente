@@ -5,6 +5,6 @@ const productos = [
 ];
 
 productos.forEach((producto) => {
- producto.precio = producto.precio *0.9;
+ producto.precio = producto.precio * 1.1;
 });
 console.log(productos);
