@@ -1,5 +1,5 @@
-const llamarPalabra = pedirPalabra();
+let llamarPalabra = pedirPalabra();
 
-llamarPalabra = new Set(pedirPalabra);
+llamarPalabra = new Set(llamarPalabra);
 llamarPalabra.reverse();
 console.log(`Lista de palabras ${llamarPalabra}`);
