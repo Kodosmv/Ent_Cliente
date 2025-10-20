@@ -13,6 +13,8 @@ function pedirPalabra(){
     
 }
 
-function mostrarPantalla(lista){
-    
+function mostrarPantalla(lista) {
+    document.getElementById('sol').innerHTML = 
+        `Lista de palabras introducidas:
+        <p>${lista.join(", ")}</p> `;
 }
