@@ -9,5 +9,10 @@ function pedirPalabra(){
 
     }while(palabra);
 
+    return palabras;
+    
+}
+
+function mostrarPantalla(lista){
     
 }
