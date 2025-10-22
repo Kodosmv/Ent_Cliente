@@ -1,5 +1,5 @@
 
-    
+function ej1(){
 
     let llamarPalabra = pedirPalabra();
 
@@ -7,3 +7,4 @@
     llamarPalabra.sort((a, b) => b.localeCompare(a, "es"));
 
     mostrarPantalla(llamarPalabra);
+}
