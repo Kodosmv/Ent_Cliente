@@ -1,4 +1,3 @@
-function ej2 (){
 
 
     let palabras= pedirPalabra();
@@ -21,4 +20,3 @@ function ej2 (){
     });
 
     mostrarMap(mapPalabras);
-}
