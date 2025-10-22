@@ -18,3 +18,14 @@ function mostrarPantalla(lista) {
         `Lista de palabras introducidas:
         <p>${lista.join(", ")}</p> `;
 }
+
+function mostrarMap(mapa){
+   
+    const lista = [];
+    mapa.forEach((cantidad, palabra) => {
+        lista.push(`${palabra}: ${cantidad}`);
+    });
+    
+    document.getElementById('sol').innerHTML =
+    `<p>${lista.join("<br>")}</p>`;
+}
