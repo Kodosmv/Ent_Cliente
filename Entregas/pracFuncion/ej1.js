@@ -1,6 +1,10 @@
-let llamarPalabra = pedirPalabra();
+function ej1() {
+    
 
-llamarPalabra = [...new Set(llamarPalabra)]
-llamarPalabra.sort((a, b) => b.localeCompare(a, "es"));
+    let llamarPalabra = pedirPalabra();
 
-mostrarPantalla(llamarPalabra);
+    llamarPalabra = [...new Set(llamarPalabra)]
+    llamarPalabra.sort((a, b) => b.localeCompare(a, "es"));
+
+    mostrarPantalla(llamarPalabra);
+}
