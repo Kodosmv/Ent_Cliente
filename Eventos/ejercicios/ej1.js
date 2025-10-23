@@ -10,3 +10,5 @@ function addElement(){
 
 }
 document.getElementById("but").onclick= addElement;
+
+
