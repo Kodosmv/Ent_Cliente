@@ -23,6 +23,25 @@
         El botón de enviar no funcionará si las validaciones no son correctas (ponedlo en gris
         mientras no sean correctas).   
     </p>
+    <form id="formulario" novalidate>
+        <div>
+            <label for="email" >Email:</label>
+            <input type="text" id="email" name="email">
+            <span class="error" id="emailError"></span>
+        
+        </div>
+
+        <div>
+            <label for=" contrasenya">Contrasenya:</label>
+            <input type="contrasenya" id="contrasenya" name="contrasenya">
+            <span class="error" id="passError"></span>
+        </div>
+
+        <button type="submit" id="boton" disabled>Enviar</button>
+    </form>
+
+  <script src="ej2.js"></script>
+    
 
     
 </body>
