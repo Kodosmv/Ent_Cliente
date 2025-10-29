@@ -8,7 +8,7 @@ let bienContrasenya = false;
 // validar para poder enviar
 function validar() {
 
-  if (bienEmail && bienContrasenyao) {
+  if (bienEmail && bienContrasenya) {
         boton.disabled = false;
         boton.classList.add('enabled');
       } else {
@@ -55,7 +55,7 @@ contrasenya.oninput = function() {
 };
 
 //envair fomr
-document.querySelector('formulario').addEventListener('submit', function(e) {
+document.getElementById('formulario').addEventListener('submit', function(e) {
   if (!(bienEmail && bienContrasenya)) {
     e.preventDefault();
   } else {
