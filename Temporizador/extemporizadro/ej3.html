@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Hola </h1>
+    <p id ='caja'></p>
+    <script>
+       
+        let visitas = localStorage.getItem('visitas');
+
+        if(visitas){
+            visitas = parseInt(visitas) +1;
+        }else{
+            visitas = 1;
+        }
+
+        if(visitas>10){
+            visitas = 0;
+            localStorage.removeItem('visitas');
+        }else {
+            localStorage.setItem('visitas', visitas);
+        }
+
+        document.getElementById('caja').textContent='Hola, esta es tu ' + visitas;
+
+    </script>
+
+    
+</body>
+</html>
