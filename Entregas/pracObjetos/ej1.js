@@ -15,7 +15,7 @@ class Rectangulo{
             this.height= height;
         }
     }
-    cambiarDimesiones( num1 ,  num2){
+    cambiarDimensiones( num1 ,  num2){
         if(num1 <=0 && num2<=0){
             this.height= 1;
             this.width=1;
@@ -40,16 +40,36 @@ class Rectangulo{
     }
     comparaRectan(r2){
         if(this.width > r2.width){
-            return `el primero es mayor`;
+            return ` mayor`;
         }else if(this.width<r2.width){
-            return `el primero es menor`;
+            return ` menor`;
         }else{
             return `son iguales`;
         }
 
     }
 }
-let r1= new  Rectangulo(3,4);
-let r2= new Rectangulo(3,4);
-console.log(r1.calcularArea());
-console.log(r1.comparaRectan(r2));
+let r= new  Rectangulo(3,4);
+let r0= new Rectangulo(3,4);
+console.log(r.calcularArea());
+console.log(r.comparaRectan(r0));
+
+function ej1() {
+    let salida = '' ;
+
+   
+    let r1 = new Rectangulo(3, 4); 
+    let r2 = new Rectangulo(5, 2); 
+
+    salida += 'Calcular el área : área de r1 = ' + r1.calcularArea() + ', área de r2 = ' + r2.calcularArea() + '\n';
+    salida += 'Comparar: El rectángulo r1 es ' + r1.comparaRectan(r2) + ' que el rectángulo r2 \n';
+    let copiaR1 = r1.copiaRectan();
+    salida += 'Copiar: Copia de r1 = ancho: ' + copiaR1.width + ', alto: ' + copiaR1.height + '\n';
+
+   
+    r2.cambiarDimensiones(-2, 6); 
+    salida += 'Modificar datos: nuevo r2 = ancho: ' + r2.width + ', alto: ' + r2.height + ', área: ' + r2.calcularArea() + '\n';
+
+   
+    document.getElementById('sol').textContent = salida;
+}

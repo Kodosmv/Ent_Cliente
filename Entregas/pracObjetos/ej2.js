@@ -29,3 +29,14 @@ let o1 = new Ordenador('Hp','345');
 console.log(o1.toString());
 let p1 = new Portatil('hp', '234','6');
 console.log(p1.toString());
+function ej2(){
+    let s = '';
+
+    let o2 = new Ordenador('Lenovo', '58');
+    let p2 = new Portatil('Apel', '694', 9);
+    
+    s += 'Ordenador: ' + o2.toString() + '\n';  
+    s += 'Portátil: ' + p2.toString() + '\n';
+
+    document.getElementById('sol').textContent = s;
+}
