@@ -6,10 +6,36 @@
     <title>Document</title>
 </head>
 <body>
+    <h3> Bolsa  desde 100 </h3>
     <div>
         <p id = "bolsa"> </p>
+        <br>
+        <p id = "mensaje"> </p>
     </div>
     <script>
+        let bolsaInicial = 100;
+        let mensaje = document.getElementById("mensaje");
+        let mostrarCambio = document.getElementById("bolsa");
+
+
+        let intervalo = setInterval(() => {
+           
+            let cambio = Math.floor(Math.random() * 11) - 5; 
+            bolsaInicial += cambio;
+            mostrarCambio.textContent = "Bolsa actual: " + bolsaInicial ;
+            let parar
+            if (bolsaInicial >= 120) {
+                mensaje.textContent = "¡Máximo alcanzado!";
+                clearInterval(intervalo);
+            } else if (bolsaInicial <  80) {
+                mensaje.textContent = "¡Mínimo alcanzado!";
+                clearInterval(intervalo);
+            } 
+
+                
+        },2000); 
+
+
         
 
     </script>
