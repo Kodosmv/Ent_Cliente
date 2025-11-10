@@ -20,7 +20,7 @@ function enviarPedido(direccion){
 		}
 
 		setTimeout(() => {
-			let randomError = Math.random() < 0.2; // 20% de error
+			let randomError = Math.random() < 0.2; 
 			if (randomError){
 				reject("Error durante el envío, intente de nuevo.");
 			}else{
