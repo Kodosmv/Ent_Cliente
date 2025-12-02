@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <video src="example_MP4.mp4" controls>
+      No se puede mostrar el vídeo en este navegador
+    </video>
+    <br />
+    <select name="velo" id="selec">
+      <option value="1">0.5</option>
+      <option value="2">1x</option>
+      <option value="3">1.5x</option>
+      <option value="4">2x</option>
+    </select>
+
+    <script>
+      let video = document.querySelector('video');
+      let select = document.getElementById('selec');
+      select.addEventListener('change', (ev) => {
+        video.playbackRate = select.value;
+    });
+    </script>
+  </body>
+</html>

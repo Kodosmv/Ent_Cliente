@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="no">
+    <script>
+      let body = document.getElementById('no');
+      navigator.geolocation.getCurrentPosition((pos) => {
+        let latitude = pos.coords.latitude;
+        if (latitude < 0) {
+          body.style.backgroundColor = 'green';
+        } else if ((latitude = 0)) {
+          body.style.backgroundColor = 'yellow';
+        } else {
+          body.style.backgroundColor = 'blue';
+        }
+      });
+    </script>
+  </body>
+</html>
