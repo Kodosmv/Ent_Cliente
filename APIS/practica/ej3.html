@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <button id="btn">Pulsame</button>
-    <script>
-      let n = document.getElementById('btn');
-      function mostrarNotificacion() {
-        n.addEventListener('click', () => {
-          new Notification('Bienvenida', {
-            body: 'Hola',
-            icon: 'img.jpg',
-          });
-        });
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="btn">Pulsame</button>
+        <script>
+            let n = document.getElementById("btn");
+            function mostrarNotificacion() {
+                n.addEventListener("click", () => {
+                    new Notification("Bienvenida", {
+                        body: "Hola",
+                        icon: "img.jpg",
+                    });
+                });
+            }
 
-      let permiso = Notification.permission;
-      if (permiso === 'default') {
-        Notification.requestPermission().then((resp) => {
-          if (resp === 'granted') {
-            mostrarNotificacion();
-          }
-        });
-      } else if (permiso === 'granted') {
-        mostrarNotificacion();
-      }
-    </script>
-  </body>
+            let permiso = Notification.permission;
+            if (permiso === "default") {
+                Notification.requestPermission().then((resp) => {
+                    if (resp === "granted") {
+                        mostrarNotificacion();
+                    }
+                });
+            } else if (permiso === "granted") {
+                mostrarNotificacion();
+            }
+        </script>
+    </body>
 </html>

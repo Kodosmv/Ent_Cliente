@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="contador"></p>
+    </body>
+    <script>
+        const contador = document.getElementById("contador");
+        function intervalo() {
+            let num = 5;
+            let temp = setInterval(() => {
+                contador.textContent = num;
+                num--;
+                if (num == -1) {
+                    clearInterval(temp);
+
+                    let permiso = Notification.permission;
+                    if (permiso === "default") {
+                        Notification.requestPermission().then((resp) => {
+                            if (resp === "granted") {
+                                mostrarNotificacion();
+                            }
+                        });
+                    } else if (permiso === "granted") {
+                        mostrarNotificacion();
+                    }
+                }
+            }, 1000);
+        }
+        function mostrarNotificacion() {
+            let n = new Notification("Información", {
+                body: "¡Puedes ir a mi página si haces clic!",
+            });
+            
+            n.addEventListener("click", () => {
+                window.location.href="ej2.html";
+            });
+        }
+        
+
+        intervalo();
+    </script>
+</html>
